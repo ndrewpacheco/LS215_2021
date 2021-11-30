@@ -1,6 +1,7 @@
 function acronym(string) {
   return string.split(/[ -]/)
-               .map(word => word[0].toUpperCase()).join('');
+               .map(word => word[0].toUpperCase())
+               .join('');
 
 }
 

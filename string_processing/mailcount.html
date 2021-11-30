@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <script src="https://dbdwvr6p7sskw.cloudfront.net/210/files/email_data_v2.js"></script>
+    <script>
+      function mailCount(emailData) {
+        let emails = emailData.split(/##\|\|##/);
+        let dates = emails.map(email => email.match(/\d\d-\d\d-\d\d\d\d/)[0]);
+        dates.sort();
+
+        let firstDate = validDate(dates[0]);
+        let lastDate = validDate(dates[dates.length - 1]);
+
+        console.log('Count of Email: ' + emails.length);
+        console.log('Date Range: ' + firstDate + ' - ' + lastDate);
+      }
+
+      function validDate(date) {
+        let newDate = new Date(Date.parse(date));
+        return newDate.toDateString();
+      }
+
+      mailCount(emailData);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
