@@ -24,7 +24,6 @@ function isBlockWord(word) {
       if (word.includes(LETTERS[char])) return false;
     }
   }
-
   return true;
 }
 console.log(isBlockWord('BATCH'));      // true
