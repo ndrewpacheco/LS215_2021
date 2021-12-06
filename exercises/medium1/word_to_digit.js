@@ -7,11 +7,8 @@ const NUMBERS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 
 
 
 function wordToDigit(str) {
-  // let result = str;
-
   NUMBERS.forEach((number, index) => {
     let regex = new RegExp(number, 'g');
-
     str = str.replaceAll(regex, index);
   })
   console.log(str);
